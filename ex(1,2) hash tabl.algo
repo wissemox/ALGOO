@@ -1,0 +1,82 @@
+ALGORITHM algorithm_name
+VAR
+    element : INTEGER , STRING 
+    sum : INTEGER = 0 
+    htabelement : HASH_TABLE<STRING,INTEGER>;
+    
+    i : INTEGER = 0 ;
+// try number 1 hash tabl
+    
+    htabelement : HASH_TABLE<STRING,INTEGER>;
+    htab : HASH_TABLE<STRING,INTEGER>;
+    htab.insert("zer",0);
+    htab.insert("one",4);
+    htab.insert("two",5);
+    htab.insert("there",7);
+    FOR i FROM 0 TO htab.value.length-1 STEP step  DO
+        IF (htab[i]==htab02.value) THEN
+            FOR i FROM 0 TO htab.index.length-1 STEP step  DO
+                htabelement.insert(htab[i],htab[i])
+            END_FOR
+            else { 
+                sum+=htab[i]
+            }
+            
+        END_IF
+    END_FOR
+    htab02 : HASH_TABLE<STRING,INTEGER>;
+    htab.insert("zer",0);
+    htab.insert("one",1);
+    htab.insert("two",2);
+    htab.insert("there",5); 
+
+FOR i FROM 0 TO htab02.value.length-1 STEP step  DO
+        IF (htab02[i]==htab.value) THEN
+            FOR i FROM 0 TO htab.index.length-1 STEP step  DO
+                htabelement.insert(htab[i],htab[i])
+            END_FOR
+            else { 
+                sum+=htab02[i]
+            }
+        
+END_FOR
+END
+
+//exmples 2 
+
+
+VAR  
+    element : INTEGER , STRING  ;
+    sum : INTEGER = 0  ;
+    i : INTEGER = 0 ; 
+BEGIN
+    htab : HASH_TABLE<STRING,INTEGER>;
+    htab.insert("zer",0);
+    htab.insert("one",4);
+    htab.insert("two",5);
+    htab.insert("there",7);
+    FOR i FROM 0 TO htab.length-1 STEP step  DO
+        IF (htab[i]==htab02) THEN
+            
+                element.push(htab[i])
+            END_FOR
+            else { 
+                sum+=htab[i]
+            }
+            
+        END_IF
+    END_FOR
+    htab02 : HASH_TABLE<STRING,INTEGER>;
+    htab.insert("zer",0);
+    htab.insert("one",1);
+    htab.insert("two",2);
+    htab.insert("there",5); 
+
+FOR i FROM 0 TO htab02.length-1 STEP step  DO
+        IF (htab02[i]==htab) THEN
+            FOR i FROM 0 TO htab.index.length-1 STEP step  DO
+                element.push(htab[i])
+            END_FOR
+            else { 
+                sum+=htab02[i]
+            }

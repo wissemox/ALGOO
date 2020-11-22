@@ -1,0 +1,34 @@
+ALGORITHM algorithm_name
+VAR
+    commentelement : INTEGER  //5 
+    sum : INTEGER = 0 
+    set1 : ARRAY_OF INTEGER[4];
+    set2 : ARRAY_OF INTEGER[4];
+    
+    
+BEGIN
+    read(sum)
+    read(commentelement)
+    set1 : {1 , 5 , 2 , 7}
+    set2 : {2 , 0 , 9 , 5}
+    FOR i FROM 0 TO set1.length-1 STEP step  DO
+        IF (set1[i] == set2) THEN
+            //check if array in array set 2 there is number = set1[i]
+            commentelement.push(set1[i]) 
+            else { 
+                sum+=set1[i]
+            } 
+            IF (set2[i] == set1) THEN
+            WHILE (commentelement == set2[i]) DO
+                write="done"
+            END_WHILE
+            else { 
+                sum+=set2[i]
+            } 
+        END_IF
+        
+    END_FOR
+    set_instructions
+    print (sum)
+    print (commentelement)
+END
